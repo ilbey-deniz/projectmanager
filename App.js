@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { NavigationContainer } from '@react-navigation/native';
+//import { NavigationContainer } from '@react-navigation/native';
 
 import {
   SafeAreaView,
@@ -15,6 +15,7 @@ function App(){
   return (
       <SafeAreaView>
           <Text> merhaba </Text>
+          <Text> merhabana merhaba kardeş </Text>
       
       </SafeAreaView>
   );
