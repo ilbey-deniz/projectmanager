@@ -15,6 +15,8 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: "blue", flex: 0.3,
+    //yaraaaaa
+    
   }
 });
 
