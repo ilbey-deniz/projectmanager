@@ -5,6 +5,8 @@ import React from 'react';
 import {
   SafeAreaView,
   StyleSheet,
+  Button,
+  Alert, 
   ScrollView,
   View,
   Text,
@@ -14,11 +16,18 @@ import {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "blue", flex: 0.3,
-    //yaraaaaa
-    
-  }
+    justifyContent: 'center',
+    marginHorizontal: 16,
+  },
+  separator: {
+    marginVertical: 8,
+    borderBottomColor: '#737373',
+    borderBottomWidth: StyleSheet.hairlineWidth,
+  },
 });
+const Separator = () => (
+  <View style={styles.separator} />
+);
 
 function App(){
   return (
@@ -26,6 +35,14 @@ function App(){
           <Text> merhaba </Text>
           <Text> merhabana merhaba kardeş </Text>
       
+      <View>
+        <Separator />
+      </View>
+          <Button
+        title="Bas bakayım bi bana"
+        color="#f194ff"
+        onPress={() => Alert.alert(' yarra yedin ')}
+      />
       </View>
   );
 };
