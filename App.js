@@ -11,13 +11,20 @@ import {
   StatusBar,
 } from 'react-native';
 
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: "blue", flex: 0.3,
+  }
+});
+
 function App(){
   return (
-      <SafeAreaView>
+      <View style ={styles.container}>
           <Text> merhaba </Text>
           <Text> merhabana merhaba kardeş </Text>
       
-      </SafeAreaView>
+      </View>
   );
 };
 
