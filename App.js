@@ -21,7 +21,7 @@ const image = './components/View/A.png' ;
 function ProjectsScreen() {
   return (
     <View>
-      <ImageBackground source={require('./components/View/A.jpg')} style={{width: 400, height: 400}}>
+      <ImageBackground source={require('./components/View/A.jpg')} style={{width: 415, height: 700}}>
     
         <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
           <Text>Projects</Text>
@@ -33,17 +33,27 @@ function ProjectsScreen() {
 
 function Settings() {
   return (
-    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-      <Text>Settings</Text>
-    </View>
+    <View>
+      <ImageBackground source={require('./components/View/A.jpg')} style={{width: 415, height: 700}}>
+    
+        <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+          <Text>Settings</Text>
+        </View>
+      </ImageBackground>
+      </View>
   );
 }
 
 function Calender() {
   return (
-    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-      <Text>Calender</Text>
-    </View>
+    <View>
+      <ImageBackground source={require('./components/View/A.jpg')} style={{width: 415, height: 700}}>
+    
+        <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+          <Text>Calendar</Text>
+        </View>
+      </ImageBackground>
+      </View>
   );
 }
 
