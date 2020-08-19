@@ -25,7 +25,7 @@ function ProjectsScreen() {
 
 function Settings() {
   return (
-    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+    <View style={{ flex: 1, alignItems: 'bottom', justifyContent: 'center' }}>
       <Text>Settings</Text>
     </View>
   );
