@@ -10,22 +10,30 @@ import {
   View,
   Text,
   TextInput,
+  StyleSheet,
+  ImageBackground,
 } from 'react-native';
 
 const Tab = createBottomTabNavigator();
+const image = './components/View/A.png' ;
 
 
 function ProjectsScreen() {
   return (
-    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-      <Text>Projects</Text>
-    </View>
+    <View>
+      <ImageBackground source={require('./components/View/A.jpg')} style={{width: 400, height: 400}}>
+    
+        <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+          <Text>Projects</Text>
+        </View>
+      </ImageBackground>
+      </View>
   );
 }
 
 function Settings() {
   return (
-    <View style={{ flex: 1, alignItems: 'bottom', justifyContent: 'center' }}>
+    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
       <Text>Settings</Text>
     </View>
   );
