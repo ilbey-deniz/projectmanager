@@ -1,6 +1,8 @@
-
+import 'react-native-gesture-handler';
 import React from 'react';
-//import { NavigationContainer } from '@react-navigation/native';
+import { NavigationContainer, TabActions } from '@react-navigation/native';
+import { createBottomTabNavigator} from '@react-navigation/bottom-tabs';
+import Ionicons from 'react-native-vector-icons/Ionicons';
 import Deneme from './components/Deneme';
 import {
   Button,
@@ -10,41 +12,70 @@ import {
   TextInput,
 } from 'react-native';
 
+const Tab = createBottomTabNavigator();
+
+
+function ProjectsScreen() {
+  return (
+    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+      <Text>Projects</Text>
+    </View>
+  );
+}
+
+function Settings() {
+  return (
+    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+      <Text>Settings</Text>
+    </View>
+  );
+}
+
+function Calender() {
+  return (
+    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+      <Text>Calender</Text>
+    </View>
+  );
+}
 
 
 
 function App(){
   return (
-      <View style ={Deneme.container}>
-          <Text> merhaba </Text>
-          <Text> merhabana merhaba kardeş </Text>
-          <View style = {{padding : 40}}>
+    <NavigationContainer>{
       
-              <TextInput placeholder = "merhaba de bakıyım" style = {{ borderColor:'blue', borderWidth: 1,}} />
+      <Tab.Navigator screenOptions={({ route }) => ({
+        tabBarIcon: ({ focused, color, size }) => {
+          let iconName;
 
-          </View>      
-     
-          <Button
-        title="Bas bakayım bi bana"
-        color="#f194ff"
-        onPress={() => Alert.alert(' yarra yedin ')}
-      />
+          if (route.name === 'Projects') {
+            iconName = focused
+              ? "md-bar-chart"
+              : "md-bar-chart-outline";
+          }else if (route.name === 'Calender') {
+            iconName = focused
+              ? "md-calendar"
+              : "md-calendar-outline";
+          }else if (route.name === 'Settings') {
+            iconName = focused
+              ? "md-person"
+              : "md-person-outline";
+          } 
 
-      <View style ={{flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' }}>
-          <Button
-        title="Basma"
-        color="#00ff7f"
-        style= {{width: '200%'}}
-        onPress={() => Alert.alert(' Basma amk')}
-      />
-      <Button
-        title="Basma"
-        color="#cd853f"
-        style= {{width: '200%'}}
-        onPress={() => Alert.alert(' Basma amk ')}
-      />
-      </View>
-      </View>
+          return <Ionicons name={iconName} size={size} color={color} />;
+        },
+      })}
+      tabBarOptions={{
+        activeTintColor: 'tomato',
+        inactiveTintColor: 'gray',
+      }}
+      >
+        <Tab.Screen name="Projects" component={ProjectsScreen} />
+        <Tab.Screen name="Calender" component={Calender} />
+        <Tab.Screen name="Settings" component={Settings} />
+      </Tab.Navigator>
+    }</NavigationContainer>
   );
 };
 
