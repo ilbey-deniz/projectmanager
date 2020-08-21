@@ -1,7 +1,7 @@
 import 'react-native-gesture-handler';
 import React from 'react';
 import { NavigationContainer, TabActions } from '@react-navigation/native';
-import { createBottomTabNavigator} from '@react-navigation/bottom-tabs';
+import { createMaterialTopTabNavigator} from '@react-navigation/material-top-tabs';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import Deneme from './components/Deneme';
 import {
@@ -14,7 +14,7 @@ import {
   ImageBackground,
 } from 'react-native';
 
-const Tab = createBottomTabNavigator();
+const Tab = createMaterialTopTabNavigator();
 const image = './components/View/A.png' ;
 
 
@@ -81,12 +81,17 @@ function App(){
               : "md-person-outline";
           } 
 
-          return <Ionicons name={iconName} size={size} color={color} />;
+          return <Ionicons name={iconName} size={25} color={color} />;
         },
       })}
+      
+      tabBarPosition= {'bottom'}
+
       tabBarOptions={{
         activeTintColor: 'tomato',
         inactiveTintColor: 'gray',
+        showIcon: 'true'
+
       }}
       >
         <Tab.Screen name="Projects" component={ProjectsScreen} />
