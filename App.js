@@ -15,13 +15,15 @@ import {
 } from 'react-native';
 
 const Tab = createMaterialTopTabNavigator();
-const image = './components/View/A.png' ;
+const image1 = './components/View/arkaplan_1.jpg' ;
+const image2 = './components/View/arkaplan_2.jpg' ;
+const image3 = './components/View/arkaplan_3.jpg' ;
 
 
 function ProjectsScreen() {
   return (
     <View>
-      <ImageBackground source={require('./components/View/A.jpg')} style={{width: 415, height: 700}}>
+      <ImageBackground source={require('./components/View/arkaplan_1.jpg')} style={{width: 415, height: 700}}>
     
         <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
           <Text>Projects</Text>
@@ -34,7 +36,7 @@ function ProjectsScreen() {
 function Settings() {
   return (
     <View>
-      <ImageBackground source={require('./components/View/A.jpg')} style={{width: 415, height: 700}}>
+      <ImageBackground source={require('./components/View/arkaplan_3.jpg')} style={{width: 415, height: 700}}>
     
         <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
           <Text>Settings</Text>
@@ -47,7 +49,7 @@ function Settings() {
 function Calender() {
   return (
     <View>
-      <ImageBackground source={require('./components/View/A.jpg')} style={{width: 415, height: 700}}>
+      <ImageBackground source={require('./components/View/arkaplan_2.jpg')} style={{width: 415, height: 700}}>
     
         <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
           <Text>Calendar</Text>
