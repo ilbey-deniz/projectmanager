@@ -46,7 +46,7 @@ function Settings() {
   );
 }
 
-function Calender() {
+function Calendar() {
   return (
     <View>
       <ImageBackground source={require('./components/View/arkaplan_2.jpg')} style={{width: 415, height: 700}}>
@@ -73,7 +73,7 @@ function App(){
             iconName = focused
               ? "md-bar-chart"
               : "md-bar-chart-outline";
-          }else if (route.name === 'Calender') {
+          }else if (route.name === 'Calendar') {
             iconName = focused
               ? "md-calendar"
               : "md-calendar-outline";
@@ -97,7 +97,7 @@ function App(){
       }}
       >
         <Tab.Screen name="Projects" component={ProjectsScreen} />
-        <Tab.Screen name="Calender" component={Calender} />
+        <Tab.Screen name="Calendar" component={Calendar} />
         <Tab.Screen name="Settings" component={Settings} />
       </Tab.Navigator>
     }</NavigationContainer>
