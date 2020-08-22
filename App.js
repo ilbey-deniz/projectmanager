@@ -1,65 +1,13 @@
 import 'react-native-gesture-handler';
 import React from 'react';
-import { NavigationContainer, TabActions } from '@react-navigation/native';
-import { createMaterialTopTabNavigator} from '@react-navigation/material-top-tabs';
+import { NavigationContainer } from '@react-navigation/native';
+import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
 import Ionicons from 'react-native-vector-icons/Ionicons';
-import Deneme from './components/Deneme';
-import {
-  Button,
-  Alert, 
-  View,
-  Text,
-  TextInput,
-  StyleSheet,
-  ImageBackground,
-} from 'react-native';
+import ProjectsScreen from './components/projects';
+import CalendarScreen from './components/calendar';
+import SettingsScreen from './components/settings';
 
 const Tab = createMaterialTopTabNavigator();
-const image1 = './components/View/arkaplan_1.jpg' ;
-const image2 = './components/View/arkaplan_2.jpg' ;
-const image3 = './components/View/arkaplan_3.jpg' ;
-
-
-function ProjectsScreen() {
-  return (
-    <View>
-      <ImageBackground source={require('./components/View/arkaplan_1.jpg')} style={{width: 415, height: 700}}>
-    
-        <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-          <Text>Projects</Text>
-        </View>
-      </ImageBackground>
-      </View>
-  );
-}
-
-function Settings() {
-  return (
-    <View>
-      <ImageBackground source={require('./components/View/arkaplan_3.jpg')} style={{width: 415, height: 700}}>
-    
-        <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-          <Text>Settings</Text>
-        </View>
-      </ImageBackground>
-      </View>
-  );
-}
-
-function Calendar() {
-  return (
-    <View>
-      <ImageBackground source={require('./components/View/arkaplan_2.jpg')} style={{width: 415, height: 700}}>
-    
-        <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-          <Text>Calendar</Text>
-        </View>
-      </ImageBackground>
-      </View>
-  );
-}
-
-
 
 function App(){
   return (
@@ -97,8 +45,8 @@ function App(){
       }}
       >
         <Tab.Screen name="Projects" component={ProjectsScreen} />
-        <Tab.Screen name="Calendar" component={Calendar} />
-        <Tab.Screen name="Settings" component={Settings} />
+        <Tab.Screen name="Calendar" component={CalendarScreen} />
+        <Tab.Screen name="Settings" component={SettingsScreen} />
       </Tab.Navigator>
     }</NavigationContainer>
   );

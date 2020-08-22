@@ -6,16 +6,16 @@ import {
   } from 'react-native';
 
 
-function SettingsScreen() {
+function CalendarScreen() {
     return (
       <View>
-        <ImageBackground source={require('./View/arkaplan_3.jpg')} style={{width: 415, height: 700}}>
+        <ImageBackground source={require('./View/arkaplan_2.jpg')} style={{width: 415, height: 700}}>
       
           <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-            <Text>Settings</Text>
+            <Text>Calendar</Text>
           </View>
         </ImageBackground>
         </View>
     );
   }
-  export default SettingsScreen;
+  export default CalendarScreen;
