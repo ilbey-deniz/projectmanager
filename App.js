@@ -3,9 +3,9 @@ import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
 import Ionicons from 'react-native-vector-icons/Ionicons';
-import ProjectsScreen from './components/projects';
-import CalendarScreen from './components/calendar';
-import SettingsScreen from './components/settings';
+import ProjectsScreen from './src/screens/projects';
+import CalendarScreen from './src/screens/calendar';
+import SettingsScreen from './src/screens/settings';
 
 const Tab = createMaterialTopTabNavigator();
 

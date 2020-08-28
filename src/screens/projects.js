@@ -9,13 +9,13 @@ import {
   } from 'react-native';
 
 
-const DATA = require('./projectsList.json');
+const DATA = require('../components/projectsList.json');
 
 function ProjectsScreen() {
     
     return (
       <View>
-        <ImageBackground source={require('./View/arkaplan_1.jpg')} style={{width: 415, height: 700}}>
+        <ImageBackground source={require('../views/arkaplan_1.jpg')} style={{width: 415, height: 700}}>
           <FlatList 
           data= {DATA}
           renderItem= {({item}) => {
